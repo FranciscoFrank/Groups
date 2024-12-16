@@ -1,0 +1,15 @@
+uuid: ab1dfb41-eb84-4382-bc1a-b1c1f2be3f5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+    - user.role.authenticated
+id: project-member
+label: Member
+weight: -100
+admin: false
+scope: insider
+global_role: authenticated
+group_type: project
+permissions: {  }

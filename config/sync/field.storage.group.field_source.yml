@@ -1,0 +1,30 @@
+uuid: 1ad0196d-2691-4374-89bd-49d2846836d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - options
+id: group.field_source
+field_name: field_source
+entity_type: group
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: Feeds
+    -
+      value: 2
+      label: 'REST Api'
+    -
+      value: 3
+      label: XML
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,170 @@
+uuid: 88542bc5-caa6-487b-bb86-91ba08e2a2e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.project.field_feeds
+    - field.field.group.project.field_rest_api
+    - field.field.group.project.field_source
+    - field.field.group.project.field_xml
+    - group.type.project
+  module:
+    - conditional_fields
+    - file
+id: group.project.default
+targetEntityType: group
+bundle: project
+mode: default
+content:
+  field_feeds:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        5813816a-734a-481b-af1b-a5d442267912:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        af1c4f9a-236c-4618-a719-624edd34fb7c:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: required
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_rest_api:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        259ff3e7-a12f-45b6-bd2b-0f59c1d569b8:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '2'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        5aa16a52-3533-400c-8d7a-51269695298c:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: required
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '2'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_source:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_xml:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        88f7a786-5e97-42fb-ac90-32b8fb1838d2:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '3'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        9848b024-3aec-4c24-9a0d-8f90206b7db3:
+          entity_type: group
+          bundle: project
+          dependee: field_source
+          settings:
+            state: required
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '3'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  status: true
+  uid: true
